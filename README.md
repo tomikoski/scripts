@@ -16,6 +16,10 @@ DEC8C7BC9675182779E564FAE1327D30F9B:347
 python hibp.py -H d4f55dec8c7bc9675182779e564fae1327d30f9b
 Found it (remaining hash:number of times leaked)
 DEC8C7BC9675182779E564FAE1327D30F9B:347
+
+# Final test with my personal password which hasn't yet leaked...
+python hibp.py -P PerkeleenPerunat666
+Yay, hash NOT found!
 ```
 
 * Requirements
