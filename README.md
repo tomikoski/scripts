@@ -7,7 +7,13 @@ Idea is that one can safely check their password from https://haveibeenpwned.com
 
 * Example usage
 ```
+# using password
 python3 hibp.py -P Qwerty123!
+Found it (remaining hash:number of times leaked)
+DEC8C7BC9675182779E564FAE1327D30F9B:347
+
+# using SHA-1 hash
+python hibp.py -H d4f55dec8c7bc9675182779e564fae1327d30f9b
 Found it (remaining hash:number of times leaked)
 DEC8C7BC9675182779E564FAE1327D30F9B:347
 ```
