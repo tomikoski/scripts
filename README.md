@@ -26,3 +26,25 @@ Yay, hash NOT found!
 ```
 pip install requests
 ```
+
+## urlparser.py
+Parse URLs (scheme, host, ...)
+
+* Example usage
+```
+python urlparser.py -u "https://duckduckgo.com/?q=github&t=h_&ia=web" "https://www.google.com/search?q=duckduckgo&oq=duck&aqs=chrome...&sourceid=chrome&ie=UTF-8"
+
+scheme:	https
+netloc:	duckduckgo.com
+host:	duckduckgo.com
+path:	/
+params:	\query:	q=github&t=h_&ia=web
+frag:	
+
+scheme:	https
+netloc:	www.google.com
+host:	www.google.com
+path:	/search
+params:	\query:	q=duckduckgo&oq=duck&aqs=chrome...&sourceid=chrome&ie=UTF-8
+frag:	
+```
