@@ -33,7 +33,7 @@ Parse URLs (scheme, host, ...)
 * Example usage
 ```
 $python3 urlparser.py -u "https://duckduckgo.com/?q=github&t=h_&ia=web" 
-"https://www.google.com/search?q=duckduckgo&oq=duck&aqs=chrome...&sourceid=chrome&ie=UTF-8"
+"https://www.google.com/search?q=duckduckgo&oq=duck&aqs=chrome...&sourceid=chrome&ie=UTF-8#12345"
 
 scheme:	https
 netloc:	duckduckgo.com
@@ -47,5 +47,5 @@ netloc:	www.google.com
 host:	www.google.com
 path:	/search
 params:	\query:	q=duckduckgo&oq=duck&aqs=chrome...&sourceid=chrome&ie=UTF-8
-frag:	
+frag:	12345
 ```
