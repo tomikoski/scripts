@@ -50,9 +50,9 @@ frag:	12345
 
 ## gendatepwd.py
 Generate passwords using years and monts (inspired by talk in HelSec) :)
-* Example usage (576 lines of stuff)
+* Example usage (1728 lines of stuff)
 ```
-$python3 gendatepwd.py
+$python3 gendatepwd.py fi_FI en_US
 2020Tam
 Tam2020
 2020tam
@@ -67,18 +67,16 @@ tammikuu2020
 TAMMIKUU2020
 ...
 ...
-2017MARRASKUU
-MARRASKUU2017
-2017Jou
-Jou2017
-2017jou
-jou2017
-2017JOU
-JOU2017
-2017Joulukuu
-Joulukuu2017
-2017joulukuu
-joulukuu2017
-2017JOULUKUU
-JOULUKUU2017
+2017Dec
+Dec2017
+2017dec
+dec2017
+2017DEC
+DEC2017
+2017December
+December2017
+2017december
+december2017
+2017DECEMBER
+DECEMBER2017
 ``` 
