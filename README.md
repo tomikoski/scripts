@@ -47,3 +47,38 @@ path:	/search
 params:	\query:	q=duckduckgo&oq=duck&aqs=chrome...&sourceid=chrome&ie=UTF-8
 frag:	12345
 ```
+
+## gendatepwd.py
+Generate passwords using years and monts (inspired by talk in HelSec) :)
+* Example usage (576 lines of stuff)
+```
+$python3 gendatepwd.py
+2020Tam
+Tam2020
+2020tam
+tam2020
+2020TAM
+TAM2020
+2020Tammikuu
+Tammikuu2020
+2020tammikuu
+tammikuu2020
+2020TAMMIKUU
+TAMMIKUU2020
+...
+...
+2017MARRASKUU
+MARRASKUU2017
+2017Jou
+Jou2017
+2017jou
+jou2017
+2017JOU
+JOU2017
+2017Joulukuu
+Joulukuu2017
+2017joulukuu
+joulukuu2017
+2017JOULUKUU
+JOULUKUU2017
+``` 
