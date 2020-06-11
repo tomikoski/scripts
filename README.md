@@ -8,7 +8,8 @@ Idea is that one can safely check their password from https://haveibeenpwned.com
 * Example usage
 ```
 # using password
-$python3 hibp.py -P Qwerty123!
+$ python3 hibp.py -P Qwerty123!
+
 Found it (remaining hash:number of times leaked)
 DEC8C7BC9675182779E564FAE1327D30F9B:347
 
@@ -32,7 +33,8 @@ Parse URLs (scheme, host, ...)
 
 * Example usage
 ```
-$python3 urlparser.py -u "https://duckduckgo.com/?q=github&t=h_&ia=web" 
+$ python3 urlparser.py -u "https://duckduckgo.com/?q=github&t=h_&ia=web" 
+
 "https://www.google.com/search?q=duckduckgo&oq=duck&aqs=chrome...&sourceid=chrome&ie=UTF-8#12345"
 
 scheme:	https
@@ -49,10 +51,11 @@ frag:	12345
 ```
 
 ## gendatepwd.py
-Generate passwords using years and monts (inspired by talk in HelSec) :)
+Generate passwords using years and months (inspired by a talk in HelSec) :)
 * Example usage (1728 lines of stuff)
 ```
-$python3 gendatepwd.py fi_FI en_US
+$ python3 gendatepwd.py fi_FI en_US
+
 2020Tam
 Tam2020
 2020tam
