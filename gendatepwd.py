@@ -5,11 +5,11 @@ import locale
 import argparse
 import sys
 
-years = [2020,2019,2018,2017]
+years = [2017,2018,2019,2020]
 months = []
 
-parser = argparse.ArgumentParser(description="Generate fancy password using dates and stuff")
-parser.add_argument('locale', nargs='+', help="Locale such as: fi_FI or en_US...")
+parser = argparse.ArgumentParser(description="Generate fancy passwords using dates!")
+parser.add_argument('locale', nargs='+', help="Locale such as: fi_FI or en_US or en_DK.UTF-8...")
 args = parser.parse_args()
 
 for l in args.locale:
