@@ -3,7 +3,6 @@
 import calendar
 import locale
 import argparse
-import sys
 
 years = [2017,2018,2019,2020]
 months = []
