@@ -4,7 +4,7 @@ import calendar
 import locale
 import argparse
 
-years = [2017,2018,2019,2020]
+years = [2017,2018,2019,2020,2021]
 months = []
 
 parser = argparse.ArgumentParser(description="Generate fancy passwords using dates!")
