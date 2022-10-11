@@ -87,7 +87,8 @@ TAMMIKUU2020
 
 * Example usage 1990 - to current year 2022 (14256 lines of stuff)
 ```
-$ python gendatepwd.py -s 1990 fi_FI en_US|head -20
+$ python gendatepwd.py -s 1990 fi_FI en_US
+
 1990Tam
 Tam1990
 1990tam
