@@ -9,7 +9,7 @@ months = []
 
 parser = argparse.ArgumentParser(description="Generate fancy passwords using dates!")
 parser.add_argument('locale', nargs='+', help="Locale such as: fi_FI or en_US or en_DK.UTF-8...")
-parser.add_argument('--start', help="Start year (default: 2017)", default=2017, type=int)
+parser.add_argument('-s','--start', help="Start year (default: 2017)", default=2017, type=int, metavar="YEAR")
 args = parser.parse_args()
 
 for l in args.locale:
