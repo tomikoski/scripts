@@ -56,20 +56,6 @@ Generate passwords using years and months (inspired by a talk in HelSec) :)
 ```
 $ python3 gendatepwd.py fi_FI en_US
 
-2020Tam
-Tam2020
-2020tam
-tam2020
-2020TAM
-TAM2020
-2020Tammikuu
-Tammikuu2020
-2020tammikuu
-tammikuu2020
-2020TAMMIKUU
-TAMMIKUU2020
-...
-...
 2017Dec
 Dec2017
 2017dec
@@ -82,6 +68,20 @@ December2017
 december2017
 2017DECEMBER
 DECEMBER2017
+...
+...
+2020Tam
+Tam2020
+2020tam
+tam2020
+2020TAM
+TAM2020
+2020Tammikuu
+Tammikuu2020
+2020tammikuu
+tammikuu2020
+2020TAMMIKUU
+TAMMIKUU2020
 ```
 
 
