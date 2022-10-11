@@ -23,7 +23,7 @@ for l in args.locale:
       months.append(calendar.month_name[i].lower())
       months.append(calendar.month_name[i].upper())
 
-    for y in range(args.start, datetime.datetime.now().year, 1):
+    for y in range(args.start, datetime.datetime.now().year + 1):
      for m in months:
        print(f"{y}{m}")
        print(f"{m}{y}")
