@@ -1,6 +1,7 @@
 use std::env;
-use std::net::Ipv4Addr;
-use std::str::FromStr;
+use std::{net::Ipv4Addr, str::FromStr};
+
+use dns_lookup::lookup_host;
 
 trait Ipv4Format {
     fn to_hex(&self) -> String;
@@ -21,22 +22,39 @@ fn byte_to_oct(decimal: u8) -> String {
     format!("{:04o}", decimal)
 }
 
-
 fn main() {
     let args: Vec<String> = env::args().collect();
     let ips: Vec<_> = args.into_iter().skip(1).collect();
 
     for s in ips.iter() {
-        let ip = Ipv4Addr::from_str(&s);
+        let ip;
+
+        // if error, assume some domain name given instead of an IP
+        if s.parse::<Ipv4Addr>().is_err() {
+            // ask DNS and return first find of IPv4
+            let resolved_ip = lookup_host(&s);
+            match resolved_ip {
+                Ok(ipv4) => {                    
+                    ip = Ipv4Addr::from_str(&ipv4[0].to_string());
+                },
+                Err(_) => {  
+                    println!("Error: Resolving hostname: '{s}'");
+                    ip = Ipv4Addr::from_str(&s);
+                }
+            }
+        } else {
+            ip = Ipv4Addr::from_str(&s);
+        }
+
         match ip {
             Ok(ip) => {                
-                println!("Original:  {}", ip);
-                println!("Decimal:   {}", ip.to_bits());
-                println!("Binary:    {}", ip.octets().map(byte_to_bin).join("."));
-                println!("Octals:    {}", ip.octets().map(|x| byte_to_oct(x)).join("."));
-                println!("Hex:       {}", ip.to_hex());
+                println!("IP-address: {}", ip);
+                println!("Decimal:    {}", ip.to_bits());
+                println!("Binary:     {}", ip.octets().map(byte_to_bin).join("."));
+                println!("Octals:     {}", ip.octets().map(|x| byte_to_oct(x)).join("."));
+                println!("Hex:        {}", ip.to_hex());
             },
-            Err(e) => { println!("Error: {e} in '{s}'")},
+            Err(e) => { println!("Error: {e} for '{s}'")},
         }
         println!("-----");
     }
