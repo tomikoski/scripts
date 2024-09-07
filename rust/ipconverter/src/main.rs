@@ -35,6 +35,7 @@ fn main() {
             let resolved_ip = lookup_host(&s);
             match resolved_ip {
                 Ok(ipv4) => {                    
+                    println!("Hostname:   {}", s);
                     ip = Ipv4Addr::from_str(&ipv4[0].to_string());
                 },
                 Err(_) => {  
