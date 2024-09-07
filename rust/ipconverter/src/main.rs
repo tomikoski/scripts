@@ -17,7 +17,6 @@ fn byte_to_bin(decimal: u8) -> String {
     format!("{:08b}", decimal)
 }
 
-
 fn byte_to_oct(decimal: u8) -> String {
     format!("{:04o}", decimal)
 }
@@ -31,7 +30,7 @@ fn main() {
 
         // if error, assume some domain name given instead of an IP
         if s.parse::<Ipv4Addr>().is_err() {
-            // ask DNS and return first find of IPv4
+            // ask DNS and return first match for IPv4 (vector contains IPv4, IPv6)
             let resolved_ip = lookup_host(&s);
             match resolved_ip {
                 Ok(ipv4) => {                    
