@@ -39,6 +39,7 @@ fn main() {
                     ip = Ipv4Addr::from_str(&ipv4[0].to_string());
                 },
                 Err(_) => {  
+                    // intentionally, we'll pass error to match below
                     println!("Error: Resolving hostname: '{s}'");
                     ip = Ipv4Addr::from_str(&s);
                 }
