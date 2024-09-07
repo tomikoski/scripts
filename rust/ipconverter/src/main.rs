@@ -1,6 +1,5 @@
 use std::env;
 use std::{net::Ipv4Addr, str::FromStr};
-
 use dns_lookup::lookup_host;
 
 trait Ipv4Format {
@@ -22,6 +21,7 @@ fn byte_to_oct(decimal: u8) -> String {
 }
 
 fn main() {
+
     let args: Vec<String> = env::args().collect();
     let ips: Vec<_> = args.into_iter().skip(1).collect();
 
@@ -59,4 +59,4 @@ fn main() {
         }
         println!("-----");
     }
-}
+} // I did it
