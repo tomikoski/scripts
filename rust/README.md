@@ -11,15 +11,16 @@ Will convert IP's, hostnames into different forms such as octal, hex, binary and
 cargo build --release
 
 # run
-./target/release/ipconverter 1.1.1.1 tk0.fi google.fi goverment.se
+./target/release/ipconverter 1.1.1.1 tk0.fi thisdoesnotexists.tk0.fi google.fi
 ```
 
 ```
-cargo run 1.1.1.1 tk0.fi google.fi goverment.se
+cargo run 1.1.1.1 tk0.fi thisdoesnotexists.tk0.fi google.fi
 ```
 
 Outputs:
 ```
+Hostname:   1.1.1.1
 IP-address: 1.1.1.1
 Decimal:    16843009
 Binary:     00000001.00000001.00000001.00000001
@@ -33,18 +34,14 @@ Binary:     00100101.10001011.00010110.11001101
 Octals:     0045.0213.0026.0315
 Hex:        258B16CD
 -----
+Error: Resolving hostname: 'thisdoesnotexists.tk0.fi'
+Error: invalid IPv4 address syntax for 'thisdoesnotexists.tk0.fi'
+-----
 Hostname:   google.fi
 IP-address: 216.58.211.227
 Decimal:    3627733987
 Binary:     11011000.00111010.11010011.11100011
 Octals:     0330.0072.0323.0343
 Hex:        D83AD3E3
------
-Hostname:   goverment.se
-IP-address: 199.59.243.226
-Decimal:    3342595042
-Binary:     11000111.00111011.11110011.11100010
-Octals:     0307.0073.0363.0342
-Hex:        C73BF3E2
 -----
 ```
