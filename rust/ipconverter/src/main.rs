@@ -43,6 +43,7 @@ fn main() {
 
             }
         }
+        
         match ip {
             Ok(ip) => {                
                 println!("IP-address: {}", ip);
