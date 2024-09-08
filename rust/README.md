@@ -15,7 +15,7 @@ cargo build --release
 ```
 
 ```
-cargo run 1.1.1.1 tk0.fi thisdoesnotexists.tk0.fi google.fi
+cargo run 1.1.1.1 tk0.fi thisdoesnotexist.tk0.fi google.fi
 ```
 
 Outputs:
@@ -34,8 +34,8 @@ Binary:     00100101.10001011.00010110.11001101
 Octals:     0045.0213.0026.0315
 Hex:        258B16CD
 -----
-Error: Resolving hostname: 'thisdoesnotexists.tk0.fi'
-Error: invalid IPv4 address syntax for 'thisdoesnotexists.tk0.fi'
+Error: Resolving hostname: 'thisdoesnotexist.tk0.fi'
+Error: invalid IPv4 address syntax for 'thisdoesnotexist.tk0.fi'
 -----
 Hostname:   google.fi
 IP-address: 216.58.211.227
