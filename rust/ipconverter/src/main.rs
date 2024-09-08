@@ -40,10 +40,9 @@ fn main() {
                 // intentionally, we'll pass error to match below
                 println!("Error: Resolving hostname: '{s}'");
                 ip = Ipv4Addr::from_str(&s);
-
             }
         }
-        
+
         match ip {
             Ok(ip) => {                
                 println!("IP-address: {}", ip);
