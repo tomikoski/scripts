@@ -26,27 +26,23 @@ fn main() {
     let ips: Vec<_> = args.into_iter().skip(1).collect();
 
     for s in ips.iter() {
-        let ip;
-
         // if error, assume some domain name given instead of an IP
-        if s.parse::<Ipv4Addr>().is_err() {
-            // ask DNS and return first match for IPv4 (vector contains IPv4, IPv6)
-            let resolved_ip = lookup_host(&s);
-            match resolved_ip {
-                Ok(ipv4) => {                    
-                    println!("Hostname:   {}", s);
-                    ip = Ipv4Addr::from_str(&ipv4[0].to_string());
-                },
-                Err(_) => {  
-                    // intentionally, we'll pass error to match below
-                    println!("Error: Resolving hostname: '{s}'");
-                    ip = Ipv4Addr::from_str(&s);
-                }
-            }
-        } else {
-            ip = Ipv4Addr::from_str(&s);
-        }
+        let resolved_ip = lookup_host(&s);
+        let ip;
+        
+        match resolved_ip {
+            Ok(ipv4) => {
+                // print extra line for hostname
+                println!("Hostname:   {}", s);
+                ip = Ipv4Addr::from_str(&ipv4[0].to_string());
+            },
+            Err(_) => {
+                // intentionally, we'll pass error to match below
+                println!("Error: Resolving hostname: '{s}'");
+                ip = Ipv4Addr::from_str(&s);
 
+            }
+        }
         match ip {
             Ok(ip) => {                
                 println!("IP-address: {}", ip);
