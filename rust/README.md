@@ -11,7 +11,7 @@ Will convert IP's, hostnames into different forms such as octal, hex, binary and
 cargo build --release
 
 # run
-./target/release/ipconverter 1.1.1.1 tk0.fi thisdoesnotexists.tk0.fi google.fi
+./target/release/ipconverter 1.1.1.1 tk0.fi thisdoesnotexist.tk0.fi google.fi
 ```
 
 ```
